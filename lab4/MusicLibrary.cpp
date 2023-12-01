@@ -25,10 +25,6 @@ Artist* MusicLibrary::GetArtist(int index) {
     return &allArtists.at(index);
 }
 
-//Playlist MusicLibrary::GetPlaylist(int index) {
-//    return allPlaylists.at(index);
-//}
-
 Playlist GetPlaylist(MusicLibrary& obj, int index) {
     return obj.allPlaylists.at(index);
 }

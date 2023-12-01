@@ -11,7 +11,9 @@ private:
     int duration;
     int year;
     std::string genre;
-
+    int listens = 0;
+    //Статическое поле(Общее кол-во треков)
+    static int trackCount;
 public:
     //Конструктор с параметрами
     Track(const std::string& title, const std::string& artist, int duration, int year, const std::string& genre);
@@ -33,6 +35,12 @@ public:
 
     //Короткий вывод трека
     void OutputShortTrack() const;
+
+    //Перегрузка оператора ++(префиксный)
+    Track& operator++();
+
+    //Перегрузка оператора ++(постфиксный)
+    Track operator++(int);
 
     //Деструктор
     ~Track() = default;

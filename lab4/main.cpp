@@ -22,6 +22,10 @@ int main() {
     {"Лето в городе", "Иван Дорн", 328, 2012, "поп"}
     };
 
+    //Увеличение кол-ва прослушиваний с помощью перегруженного оператора ++
+    ++tracks[0];
+    tracks[1]++;
+
     //Заполнение вектора tracks внутри класса Playlist
     myPlaylist.SetTracks(tracks);
 
@@ -120,7 +124,6 @@ int main() {
     //Обращаюсь к методу объекта через '->' (Заполнение артиста альбомами)
     myArtist->SetAlbums(albumsLsp);
 
-
     //Добавляю созданный плейлист в музыкальную библиотеку
     myMusicLibrary.AddPlaylist(myPlaylist);
 
@@ -141,8 +144,6 @@ int main() {
     //В методе InputTrack ввожу новый трек и присваиваю объекту newTrack
     newTrack = newTrack.InputTrack();
     //Добавление трека посредством перегрузки оператора +
-
-    //myPlaylist.AddTrack(newTrack);
     myPlaylist + newTrack;
     //Вывод всех треков
     myPlaylist.PrintTracks();
