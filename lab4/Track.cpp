@@ -86,3 +86,5 @@ Track Track::operator++(int) {
     ++listens;
     return temp;
 }
+
+int Track::trackCount = 0;
